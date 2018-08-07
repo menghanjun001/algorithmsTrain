@@ -7,8 +7,8 @@ class Solution:
             return []
         s=[i for i in range(tsum)]
         ss=[]
-        left=0
-        right=0
+        left=1
+        right=1
         while True:
             if sum(s[left:right+1])>tsum:
                 # print('s[left]=%s,sum=%s' % (s[left], s[left:right + 1]))
@@ -22,8 +22,8 @@ class Solution:
                 ss.append(s[left:right+1])
                 # print(ss)
                 right+=1
-            if left==len(s)-1 and right==len(s)-1:
+            if left+right>len(s):
                 return ss
 
-s=Solution.FindContinuousSequence(9)
+s=Solution.FindContinuousSequence(3)
 print(s)
