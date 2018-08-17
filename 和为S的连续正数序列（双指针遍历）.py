@@ -24,7 +24,7 @@ class Solution:
                 right+=1
             if left+right>len(s):
                 return ss
-            
+
 
 s=Solution.FindContinuousSequence(3)
 print(s)
