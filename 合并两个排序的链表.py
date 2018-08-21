@@ -11,5 +11,11 @@ class Solution:
             return pHead2
         if not pHead2:
             return pHead1
-        p=pHead1.next
-        return ListNode[val]
+        p=ListNode
+        if pHead1.val<pHead2.val:
+            p=pHead1
+            p.next=self.Merge(pHead1.next,pHead2)
+        else:
+            p=pHead2
+            p.next=self.Merge(pHead1,pHead2.next)
+        return p
