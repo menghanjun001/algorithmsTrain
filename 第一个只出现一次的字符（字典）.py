@@ -1,19 +1,11 @@
 # -*- coding:utf-8 -*-
 class Solution:
-    @classmethod
-    def FirstNotRepeatingChar(cls, s):
+    def FirstNotRepeatingChar(self, s):
         # write code here
-        d={}
+        h=[0]*256
         for i in s:
-            if i not in d:
-                d[i]=1
-            else:
-                d[i]+=1
-        for i,j in d.items():
-            if j==1:
-                print(s.find(i))
-                # return s.find(i)
-                break
-            # else:
-            #     return -1
-Solution.FirstNotRepeatingChar('google')
+            h[ord(i)]+=1
+        for j in range(len(s)):
+            if h[ord(s[j])]==1:
+                return j
+        return -1
