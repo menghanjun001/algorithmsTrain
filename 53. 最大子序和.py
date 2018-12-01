@@ -7,6 +7,7 @@ class Solution:
         tmp=nums[0]
         maximum=nums[0]
         for i in range(1,len(nums)):
+            print(tmp)
             if tmp<=0:
                 tmp=nums[i]
             else:
@@ -16,4 +17,4 @@ class Solution:
         return maximum
 if __name__ == '__main__':
     a=Solution()
-    print(a.maxSubArray([1,2,3,-1,9]))
+    print(a.maxSubArray([1,2,3,-4,1]))
