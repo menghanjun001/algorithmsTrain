@@ -13,8 +13,8 @@ class Solution(object):
         """
         if not root:
             return []
-        res=[]
-        res+=self.postorderTraversal(root.left)
-        res+=self.postorderTraversal(root.right)
-        res+=[root.val]
+        res = []
+        res += self.postorderTraversal(root.left)
+        res += self.postorderTraversal(root.right)
+        res += [root.val]
         return res

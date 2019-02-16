@@ -5,6 +5,7 @@ class TreeNode(object):
         self.left = None
         self.right = None
 
+
 class Solution(object):
     def buildTree(self, preorder, inorder):
         """
@@ -14,8 +15,8 @@ class Solution(object):
         """
         if not preorder or not inorder:
             return None
-        root=TreeNode(preorder.pop(0))
-        rootIndex=inorder.index(root.val)
-        root.left=self.buildTree(preorder,inorder[:rootIndex])
-        root.right=self.buildTree(preorder,inorder[rootIndex+1:])
+        root = TreeNode(preorder.pop(0))
+        rootIndex = inorder.index(root.val)
+        root.left = self.buildTree(preorder, inorder[:rootIndex])
+        root.right = self.buildTree(preorder, inorder[rootIndex + 1:])
         return root
